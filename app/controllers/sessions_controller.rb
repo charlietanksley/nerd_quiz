@@ -1,17 +1,24 @@
 class SessionsController < ApplicationController
   def create
-    registrar = Registar.new(request.env['omniauth.auth'])
-    registrar.establish_user
+    registrar = Registrar.new(request.env['omniauth.auth'])
+    user = registrar.establish_user
+
+    self.current_user = user
+
+    redirect_to root_path
   end
 
   Registrar = Struct.new(:auth) do
     def establish_user
-      user = User.find_or_initialize_by(info.fetch(:email))
-      user.name = info.fetch(:full_name)
+      ActiveRecord::Base.transaction do
+        user = User.find_or_initialize_by(email: info.fetch(:email))
+        user.name = info.fetch(:full_name)
+        user.save!
 
-      establish_authentication(user)
+        establish_authentication(user)
 
-      user.save!
+        user
+      end
     end
 
     private
@@ -21,9 +28,10 @@ class SessionsController < ApplicationController
     end
 
     def establish_authentication(user)
-      user.build_stable_authentication(refresh_token: auth.fetch(:refresh_token),
-        token: auth.fetch(:token),
-        uid: auth.fetch(:uid),
+      StableAuthentication.new(refresh_token: credentials.fetch(:refresh_token),
+        token: credentials.fetch(:token),
+        user_id: user.id,
+        uid: auth.fetch(:uid))
     end
 
     def info
