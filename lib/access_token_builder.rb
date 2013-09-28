@@ -1,5 +1,5 @@
 class AccessTokenBuilder < OAuth2::AccessToken
-  attr_reader :token_bearer
+  attr_reader :token, :token_bearer
 
   def self.build(token_bearer)
     new(token_bearer).access_token
@@ -7,17 +7,19 @@ class AccessTokenBuilder < OAuth2::AccessToken
 
   def initialize(token_bearer)
     @token_bearer = token_bearer
-    super(oauth_client, token_bearer.token, refresh_token: token_bearer.refresh_token,
-      expires_at: token_bearer.expires_at)
+    @token = @token_bearer.oauth_token
+    super(oauth_client, token.token,
+      refresh_token: token.refresh_token,
+      expires_at: token.expires_at)
   end
 
   def access_token
     if expired?
       new_token = self.refresh!
-      token_bearer.token = new_token.token
-      token_bearer.refresh_token = new_token.refresh_token
-      token_bearer.expires_at = new_token.expires_at
-      token_bearer.save!
+      token.token = new_token.token
+      token.refresh_token = new_token.refresh_token
+      token.expires_at = new_token.expires_at
+      token.save!
     end
     new_token || self
   end
