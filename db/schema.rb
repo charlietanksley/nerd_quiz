@@ -11,18 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130920020727) do
+ActiveRecord::Schema.define(version: 20130928015638) do
 
-  create_table "stable_authentications", force: true do |t|
+  create_table "oauth_tokens", force: true do |t|
     t.string   "token",         null: false
     t.string   "refresh_token", null: false
-    t.integer  "uid",           null: false
     t.integer  "user_id",       null: false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.datetime "expires_at"
   end
 
-  add_index "stable_authentications", ["user_id"], name: "index_stable_authentications_on_user_id", using: :btree
+  add_index "oauth_tokens", ["user_id"], name: "index_oauth_tokens_on_user_id", using: :btree
 
   create_table "users", force: true do |t|
     t.string   "email",      null: false
