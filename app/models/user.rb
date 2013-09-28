@@ -1,3 +1,3 @@
 class User < ActiveRecord::Base
-  has_one :stable_authentication, inverse_of: :user
+  has_one :oauth_token, inverse_of: :user, dependent: :destroy
 end
