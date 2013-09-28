@@ -2,6 +2,7 @@ require Rails.root.join('lib', 'nerd_repository')
 require Rails.root.join('lib', 'access_token_builder')
 
 class NerdListsController < ApplicationController
+  respond_to :json
   def show
   end
 
