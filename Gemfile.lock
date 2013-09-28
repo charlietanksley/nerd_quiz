@@ -148,6 +148,8 @@ DEPENDENCIES
   foreman
   jbuilder (~> 1.2)
   jquery-rails
+  omniauth
+  omniauth-oauth2
   omniauth-stable!
   pg
   pry

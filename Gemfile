@@ -17,6 +17,8 @@ gem 'jquery-rails'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
 
+gem 'omniauth'
+gem 'omniauth-oauth2'
 gem 'omniauth-stable', github: 'bignerdranch/omniauth-stable'
 gem 'foreman'
 
