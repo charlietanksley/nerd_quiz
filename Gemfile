@@ -30,6 +30,8 @@ end
 gem 'dotenv-rails', :groups => [:development, :test]
 group :development do
   gem 'pry'
+  gem 'better_errors'
+  gem 'binding_of_caller'
 end
 
 # Use unicorn as the app server
