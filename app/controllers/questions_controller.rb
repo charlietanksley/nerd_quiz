@@ -1,4 +1,5 @@
-require 'json'
+require Rails.root.join('lib', 'question')
+
 class QuestionsController < ApplicationController
   respond_to :json
 
@@ -9,6 +10,6 @@ class QuestionsController < ApplicationController
   private
 
   def question
-    "{'question':'answer'}"
+    Question.new(current_user).to_json
   end
 end
