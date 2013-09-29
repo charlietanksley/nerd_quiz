@@ -27,5 +27,5 @@ NerdQuiz::Application.configure do
   # number of complex assets.
   config.assets.debug = true
 
-  ENV["REDISTOGO_URL"] = 'redis://username@10.0.1.1:6389'
+  ENV["REDISTOGO_URL"] = 'redis://localhost:6379'
 end
