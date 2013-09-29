@@ -1,9 +1,12 @@
+require Rails.root.join('lib', 'nerd_repository')
+
 class SessionsController < ApplicationController
   def create
     registrar = Registrar.new(auth_hash)
     user = registrar.establish_user
 
     self.current_user = user
+    NerdRepository.cache(user)
 
     redirect_to root_path
   end
