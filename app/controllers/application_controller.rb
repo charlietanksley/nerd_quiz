@@ -10,7 +10,7 @@ class ApplicationController < ActionController::Base
   def authenticate!
     current_user
   rescue NoCurrentUser
-    redirect_to new_session_path
+    redirect_to new_sign_in_path
   end
   helper_method :authenticate!
 
