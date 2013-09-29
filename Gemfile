@@ -28,12 +28,16 @@ group :doc do
   gem 'sdoc', require: false
 end
 
-gem 'dotenv-rails', :groups => [:development, :test]
+gem 'dotenv-rails', groups: [:development, :test]
+gem 'rspec-rails', '~> 2.0', groups: [:development, :test]
+
 group :development do
   gem 'pry'
   gem 'better_errors'
   gem 'binding_of_caller'
 end
+
+
 
 # Use unicorn as the app server
 gem 'unicorn'
