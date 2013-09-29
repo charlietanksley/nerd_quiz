@@ -1,24 +1,20 @@
 class ApplicationController < ActionController::Base
-  NoCurrentUser = Module.new
-
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
+  before_filter :authenticate!
 
   private
 
   def authenticate!
     current_user
-  rescue NoCurrentUser
-    redirect_to new_sign_in_path
   end
   helper_method :authenticate!
 
   def current_user
     @current_user ||= User.find(session[:user_id].to_s)
   rescue ActiveRecord::RecordNotFound => e
-    e.extend(NoCurrentUser)
-    raise
+    redirect_to new_sign_in_path
   end
   helper_method :current_user
 
