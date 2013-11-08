@@ -1,10 +1,10 @@
 {
-  "name": "lineman-ember-qunit-template",
-  "title": "A little example app that pulls Lineman, Ember, and QUnit together.",
+  "name": "nerd-quiz",
+  "title": "Do you know your nerds?",
   "version": "0.0.1",
   "private": true,
   "author": {
-    "name": "Jessica Lynn Suttles"
+    "name": "Charlie Tanksley"
   },
   "dependencies": {
     "grunt-ember-handlebars": "0.7.0",
