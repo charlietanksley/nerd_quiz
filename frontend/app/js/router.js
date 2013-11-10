@@ -1,5 +1,5 @@
 App.Router.map(function(){
-  this.resource('hello', { path: '/hellos/:hello_id' });
+  this.route('quiz');
 });
 
 App.Router.reopen({

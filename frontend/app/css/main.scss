@@ -1,0 +1,34 @@
+$small-screen: "only screen and (max-width : 767px)";
+
+body,
+.pure-g [class *= "pure-u"],
+.pure-g-r [class *= "pure-u"] {
+    /* Set you're content font stack here: */
+    font-family: Georgia, Times, "Times New Roman", serif;
+}
+
+.main {
+  margin-top: 100px;
+}
+
+.app-title {
+  text-align: right;
+
+  @media #{$small-screen} {
+    text-align: center;
+  }
+}
+.scoreboard-teaser {
+  @media #{$small-screen} {
+    margin: 0 auto;
+  }
+}
+
+.left {
+  font-size: 6em;
+  background: gray;
+}
+
+.right {
+  background: gold;
+}
