@@ -1,11 +1,10 @@
 <div class="main">
-  <header class="header pure-g-r">
-    <div class="pure-u-1-4 app-title">
+  <header class="header units-row">
+    <div class="unit-30 app-title">
       <h1>Nerd<br />Quiz</h1>
     </div>
-    <div class="pure-u-3-8"></div>
-    <div class="pure-u-3-8">
-      <table class="pure-table pure-table-horizontal scoreboard-teaser">
+    <div class="unit-40 unit-push-30 scoreboard-teaser">
+      <table class="width-100 table-flat">
         <thead>
           <tr>
             <th>Position</th>
