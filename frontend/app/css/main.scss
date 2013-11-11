@@ -1,11 +1,18 @@
-body {
-  font-family: Georgia, Times, "Times New Roman", serif;
+@import 'core/settings';
+@import 'core/layouts';
+@import 'core/typography';
+
+@import 'modules/header';
+
+.blue {
+  background: blue;
 }
 
-.main {
-  margin-top: 100px;
+.gravatar {
+  display: block;
+  margin: 0 auto;
 }
 
-.app-title {
-  text-align: right;
+.answer-centered {
+  text-align: center;
 }
