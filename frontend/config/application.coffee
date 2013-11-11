@@ -24,6 +24,10 @@ module.exports = require(process.env['LINEMAN_MAIN']).config.extend 'application
   #    }
   #  }
 
+  jshint:
+    options:
+      "laxcomma": true
+
   server:
     pushState: true
 
