@@ -1,10 +1,10 @@
 <div class="main">
-  <header class="header units-row">
-    <div class="unit-30 app-title">
+  <header class="header row">
+    <div class="app-title large-3 columns">
       <h1>Nerd<br />Quiz</h1>
     </div>
-    <div class="unit-40 unit-push-30 scoreboard-teaser">
-      <table class="width-100 table-flat">
+    <div class="scoreboard-teaser large-4 columns">
+      <table>
         <thead>
           <tr>
             <th>Position</th>

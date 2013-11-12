@@ -1,19 +1,17 @@
 @import "core/variable_overrides";
 @import "foundation/foundation/components/global";
+@import "foundation/foundation/components/grid";
+@import "foundation/foundation/components/buttons";
 @import "foundation/foundation/components/type";
 @import 'core/layouts';
 
 @import 'modules/header';
+@import 'modules/multiple-choice-questions';
 
 .blue {
   background: blue;
 }
 
-.gravatar {
-  display: block;
-  margin: 0 auto;
-}
-
-.answer-centered {
-  text-align: center;
+.green {
+  background: green;
 }

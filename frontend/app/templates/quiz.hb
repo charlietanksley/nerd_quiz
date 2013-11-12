@@ -1,19 +1,24 @@
 <div class="multiple-choice-question">
-  <div class="units-row">
-    <div class="multiple-choice-question-nerd-image unit-centered unit-40">
-      <img class="gravatar" {{bindAttr src="answerImage"}} />
+  <div class="row">
+    <div class="multiple-choice-question-nerd-image large-12 columns">
+      <img class="mcq-gravatar" {{bindAttr src="answerImage"}} />
     </div>
   </div>
 
   {{#each pair in answerChoices}}
-    <div class="units-row multiple-choice-question-nerd-answers">
-      {{#each nerd in pair}}
-      <div class="unit-centered unit-60">
-        <a href="#" class="btn answer-centered unit-50">
-            {{nerd.name}}
-          </a>
+    <div class="row multiple-choice-question-nerd-answers">
+      <div class="columns large-8 large-centered">
+        <div class="row">
+
+          {{#each nerd in pair}}
+            <div class="columns large-6">
+              <a href="#" class="button mcq-answer centered-text">
+                {{nerd.name}}
+              </a>
+            </div>
+          {{/each}}
         </div>
-      {{/each}}
+      </div>
     </div>
   {{/each}}
 </div>
