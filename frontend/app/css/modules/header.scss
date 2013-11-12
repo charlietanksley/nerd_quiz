@@ -1,6 +1,9 @@
+@import "../core/typography";
+
 .app-title {
   text-align: right;
   h1 {
+    @extend .thin;
     line-height: 1em;
   }
 }
