@@ -11,11 +11,25 @@
 }
 
 .scoreboard-teaser {
+  @extend %thin;
   height: 100px;
   position: relative;
+
+  .ranking,
+  .score,
+  .name {
+    padding: 0 0.5em;
+  }
 
   .scoreboard {
     bottom: 0;
     position: absolute;
+  }
+
+  .title {
+    border-bottom: 1px solid $gray;
+    letter-spacing: 0.7px;
+    margin-bottom: 0.5em;
+    padding-bottom: 0.3em;
   }
 }

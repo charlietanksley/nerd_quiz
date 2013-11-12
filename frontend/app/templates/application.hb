@@ -5,24 +5,17 @@
     </div>
     <div class="scoreboard-teaser large-4 columns">
       <table class="scoreboard">
-        <thead>
-          <tr>
-            <th>Position</th>
-            <th>Score</th>
-            <th>Name</th>
-          </tr>
-        </thead>
-
+        <caption class="title">Scoreboard</caption>
         <tbody>
           <tr>
-            <td>1</td>
-            <td>100</td>
-            <td>Some Nerd-Personified</td>
+            <td class="ranking">1</td>
+            <td class="score">100</td>
+            <td class="name">Some Nerd-Personified</td>
           </tr>
           <tr>
-            <td>2</td>
-            <td>90</td>
-            <td>Another Nerdlongname</td>
+            <td class="ranking">50</td>
+            <td class="score">23</td>
+            <td class="name">Anothernerd Longname</td>
           </tr>
         </tbody>
       </table>
