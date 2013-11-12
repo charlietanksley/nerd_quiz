@@ -4,7 +4,7 @@
       <h1>Nerd<br />Quiz</h1>
     </div>
     <div class="scoreboard-teaser large-4 columns">
-      <table>
+      <table class="scoreboard">
         <thead>
           <tr>
             <th>Position</th>

@@ -5,5 +5,16 @@
   }
 }
 
+.header {
+  height: 100px;
+}
+
 .scoreboard-teaser {
+  height: 100px;
+  position: relative;
+
+  .scoreboard {
+    bottom: 0;
+    position: absolute;
+  }
 }
