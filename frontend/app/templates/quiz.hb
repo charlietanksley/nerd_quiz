@@ -1,6 +1,6 @@
 <div class="multiple-choice-question">
   <div class="row">
-    <div class="multiple-choice-question-nerd-image large-12 columns">
+    <div class="mcq-nerd-image large-12 columns">
       <img class="mcq-gravatar" {{bindAttr src="answerImage"}} />
     </div>
   </div>
