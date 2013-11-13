@@ -33,10 +33,14 @@ Then:
 
 1. Make sure nodejs and npm are installed (on a Mac you can do this
 with Homebrew: `brew install nodejs`).
-2. Install lineman: `npm install -g lineman`
-3. From inside the `frontend` directory, run `npm install` to build
+2. Install the `sass` gem.  To do that *either*:
+     * Make sure Bundler is installed (`gem install bundler`), then
+      `bundle install`.
+     * Just run `gem install sass`.
+3. Install lineman: `npm install -g lineman`
+4. From inside the `frontend` directory, run `npm install` to build
 all npm dependencies.
-4. From inside the `fronend` directory, run `lineman run` to start the
+5. From inside the `fronend` directory, run `lineman run` to start the
 server.  (If you've never used Lineman, it might be worth scanning
 [their homepage][lineman] to get a feel for how it works.)
 
