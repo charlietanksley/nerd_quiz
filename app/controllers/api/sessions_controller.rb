@@ -1,6 +1,7 @@
 require Rails.root.join('lib', 'nerd_repository')
 
 class Api::SessionsController < ApiController
+  skip_before_action :authenticate!
   respond_to :json
 
   def create
