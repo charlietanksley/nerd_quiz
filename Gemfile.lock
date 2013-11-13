@@ -177,6 +177,7 @@ DEPENDENCIES
   rails (= 4.0.0)
   redis
   rspec-rails (~> 2.0)
+  sass
   sass-rails (~> 4.0.0)
   sdoc
   uglifier (>= 1.3.0)
