@@ -1,5 +1,4 @@
 class SignOutController < ApplicationController
-  skip_before_action :authenticate!
 
   def destroy
     reset_session

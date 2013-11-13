@@ -1,6 +1,6 @@
 require Rails.root.join('lib', 'question')
 
-class QuestionsController < ApplicationController
+class Api::QuestionsController < ApiController
   respond_to :json
 
   def show
@@ -10,6 +10,6 @@ class QuestionsController < ApplicationController
   private
 
   def question
-    Question.new(current_user).to_json
+    Question.new(Object.new).to_json
   end
 end

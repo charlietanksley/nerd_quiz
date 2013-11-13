@@ -1,6 +1,9 @@
 require Rails.root.join('lib', 'nerd_repository')
 
-class SessionsController < ApplicationController
+class Api::SessionsController < ApiController
+  skip_before_action :authenticate!
+  respond_to :json
+
   def create
     registrar = Registrar.new(auth_hash)
     user = registrar.establish_user
@@ -8,7 +11,7 @@ class SessionsController < ApplicationController
     self.current_user = user
     NerdRepository.cache(user)
 
-    redirect_to root_path
+    redirect_to api_session_path(format: :json)
   end
 
   private
