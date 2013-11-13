@@ -40,7 +40,7 @@ with Homebrew: `brew install nodejs`).
 3. Install lineman: `npm install -g lineman`
 4. From inside the `frontend` directory, run `npm install` to build
 all npm dependencies.
-5. From inside the `fronend` directory, run `lineman run` to start the
+5. From inside the `frontend` directory, run `lineman run` to start the
 server.  (If you've never used Lineman, it might be worth scanning
 [their homepage][lineman] to get a feel for how it works.)
 
