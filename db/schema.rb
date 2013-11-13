@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20130928015638) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "oauth_tokens", force: true do |t|
     t.string   "token",         null: false
     t.string   "refresh_token", null: false
